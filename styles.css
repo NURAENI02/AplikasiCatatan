@@ -1,0 +1,107 @@
+
+* { /* model box-sizing untuk semua elemen, sehingga lebar dan tinggi elemen mencakup padding dan border,*/
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  h1{
+    font-size: 3rem;
+    color: #b93f3f;
+    justify-content: center;
+    position: absolute;
+    left: 4rem;
+}
+
+  body {
+    background-image: url('kertas.jpg');
+    background-size: cover; /* Menyesuaikan gambar agar menutupi seluruh background */
+   
+    background-position: center center; /* Posisi gambar di tengah-tengah */
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+  }
+  
+  
+  body, html { /* Menyesuaikan agar bg sesuai dengan tampilan perangkat */
+    height: 100%;
+    margin: 0;
+  }
+
+  .add { 
+    position: fixed;
+    top: 1rem;
+
+    font-size: large;
+    right: 2rem;
+    background-color: #B99B6B;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .add:active { /*efek button add*/
+    transform: scale(0.98);
+  }
+  
+  .note {
+    background-color: #fff;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 20px 20px;
+    /*height: 200px;*/
+    width: 400px;
+    max-height: 200PX;  /*Tinggi maksimum .note */
+    position: relative;
+    top: 5rem;
+   
+  }
+  
+  .timestamp { /*tanggal + waktu*/
+    position: static;
+    background-color: #f5f783;
+    padding-left : 10px;
+    padding-right: 10px;
+    color: #888; 
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .note .tools { /*kotak tombol edit delete*/
+    background-color: #e2e46a;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+  }
+  
+  .note .tools button {  /*kotak tombol edit delete*/
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+  
+  .note .main { /*posisi isi note*/
+    max-height: 75%; /* Tinggi maksimum .main */
+    overflow-y: scroll; /* Efek scrolling pada .main */
+    padding: 20px;
+  }
+  
+  .note textarea {  /*isi note*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .hidden { /*menyembunyikan elemen yang tidak perlu ditampilkan*/
+    display: none;
+  }
+  
